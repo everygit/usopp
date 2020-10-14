@@ -35,7 +35,7 @@ program.command('insert <codename> <filename>')
     .alias('ins')
     .description('insert code to file with codename')
     .option('-r, --row <number>', 'Set to insert in the first few lines')
-    .action(insertCode);
+    .action(handle.insertCode);
 
 
 program.parse(process.argv);
@@ -54,10 +54,7 @@ function test2(jsName, cmd) {
     console.log('js type is '.yellow + cmd.type);
 }
 
-function insertCode(codename, filename, cmd) {
-    console.log(filename);
-    console.log(cmd.row)
-}
+
 
 function createProject(type, path, opt) {
 

@@ -1,0 +1,24 @@
+{
+  "name": "usopp",
+  "version": "0.1.0",
+  "description": "frontend tool",
+  "bin": {
+    "usopp": "./bin/cli.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/everygit/usopp.git"
+  },
+  "keywords": [
+    "frontend"
+  ],
+  "author": "austin.sun",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/everygit/usopp/issues"
+  },
+  "homepage": "https://github.com/everygit/usopp#readme"
+}

@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 require('colors');
+const path = require('path');
 const commander = require('commander');
 const packageJson = require('../package.json');
 const handle = require('../src/index');
@@ -44,6 +45,7 @@ function test(pageName, opt) {
     console.log("page name is ".green + pageName);
     console.log(opt.force)
     console.log(process.cwd())
+    console.log(path.resolve('.'))
 }
 
 function test2(jsName, cmd) {

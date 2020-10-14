@@ -45,7 +45,8 @@ function test(pageName, opt) {
     console.log("page name is ".green + pageName);
     console.log(opt.force)
     console.log(process.cwd())
-    console.log(path.resolve('.'))
+    console.log(path.resolve('.'));
+    console.log(__dirname);
 }
 
 function test2(jsName, cmd) {

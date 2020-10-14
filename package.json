@@ -1,6 +1,6 @@
 {
   "name": "usopp",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "frontend tool",
   "bin": {
     "usopp": "./bin/cli.js"
@@ -20,5 +20,9 @@
   "bugs": {
     "url": "https://github.com/everygit/usopp/issues"
   },
-  "homepage": "https://github.com/everygit/usopp#readme"
+  "homepage": "https://github.com/everygit/usopp#readme",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "commander": "^6.1.0"
+  }
 }

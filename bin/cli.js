@@ -17,7 +17,7 @@ program.command('ls [cmd]')
 
 program.command('project <projecttype> [path]')
     .description("Create a project with a project template")
-    .action(createProject);
+    .action(handle.createProject);
 
 program.command('page [pagename]')
     .alias('p')
@@ -37,6 +37,13 @@ program.command('insert <codename> <filename>')
     .option('-r, --row <number>', 'Set to insert in the first few lines')
     .action(handle.insertCode);
 
+program.command('ui')
+    .alias('UI')
+    .description('Open the visualization tool')
+    .option('--no-open', 'Create a service without opening the page actively', false)
+    .option('-p, --port <number>', 'The port number', '8516')
+    .action(handle.startUI);
+
 
 program.parse(process.argv);
 
@@ -52,11 +59,4 @@ function test(pageName, opt) {
 function test2(jsName, cmd) {
     console.log('js name is '.green + jsName);
     console.log('js type is '.yellow + cmd.type);
-}
-
-
-
-function createProject(type, path, opt) {
-
-    console.log(opt);
 }

@@ -2,6 +2,8 @@ const cookie = require('./cookie');
 const fs = require('fs');
 const path = require('path');
 const readline = require('readline');
+const startUI = require('./startui.js');
+const createProject = require('./project');
 
 
 /**
@@ -22,7 +24,7 @@ function queryList(cmd, opt) {
 function insertCode(codename, filename, opt) {
 
     var code = '';
-    switch(codename) {
+    switch (codename) {
         case 'cookie':
             code = cookie();
             break;
@@ -39,15 +41,15 @@ function insertCode(codename, filename, opt) {
     });
     var currentRow = 1;
     var insertRow = (typeof opt.row === 'undefined') ? -1 : parseInt(opt.row);
-    rl.on('line', function(line) {
-        if(currentRow == insertRow) {
+    rl.on('line', function (line) {
+        if (currentRow == insertRow) {
             arr.push(code);
         }
         arr.push(line);
         currentRow++;
     });
-    rl.on('close', function() {
-        if(1 > insertRow || insertRow > currentRow) {
+    rl.on('close', function () {
+        if (1 > insertRow || insertRow > currentRow) {
             arr.push(line);
         }
         var r = arr.join('\n');
@@ -57,5 +59,7 @@ function insertCode(codename, filename, opt) {
 
 module.exports = {
     queryList,
-    insertCode
+    insertCode,
+    startUI,
+    createProject
 };

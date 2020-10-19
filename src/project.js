@@ -26,6 +26,6 @@ module.exports = function(projecttype, foldername, spath, opt) {
 function createSimpleProject(foldername, spath) {
     var sourceFolder = path.resolve(__dirname, '..', 'template', 'project', 'simple');
     console.log(sourceFolder);
-    var targetFolder = path.resolve('.', spath || '.');
+    var targetFolder = path.resolve(spath || '.');
     console.log(targetFolder);
 }

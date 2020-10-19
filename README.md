@@ -56,3 +56,17 @@ function delCookie(name) {
         document.cookie = name + "=" + cval + ";expires=" + exp.toGMTString();
 }
 ```
+
+type | desc
+--|--
+cookie | Basic cookie operations, including reading, writing and deleting
+vue | The basic structure of creating a multi-page vue
+
+
+## project
+
+Create different projects based on templates
+
+```sh
+usopp project simple dianfei ./demo/
+```

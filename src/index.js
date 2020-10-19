@@ -52,8 +52,9 @@ function insertCode(codename, filename, opt) {
         currentRow++;
     });
     rl.on('close', function () {
-        if (1 > insertRow || insertRow > currentRow) {
-            arr.push(line);
+        console.log(currentRow)
+        if (1 > insertRow || insertRow > currentRow || currentRow == 1) {
+            arr.push(code);
         }
         var r = arr.join('\n');
         fs.writeFileSync(filePath, r);

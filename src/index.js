@@ -1,9 +1,9 @@
-const cookie = require('./cookie');
 const fs = require('fs');
 const path = require('path');
 const readline = require('readline');
 const startUI = require('./startui.js');
 const createProject = require('./project');
+const readTemplate = require('./readTemplate');
 
 
 /**
@@ -26,7 +26,10 @@ function insertCode(codename, filename, opt) {
     var code = '';
     switch (codename) {
         case 'cookie':
-            code = cookie();
+            code = readTemplate('cookie.js');
+            break;
+        case 'vue':
+            code = readTemplate('vue.js');
             break;
         default:
             return console.log('[ERR] Can’t find code snippet ['.red + codename.bold + ']'.red);

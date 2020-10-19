@@ -1,6 +1,25 @@
 
 var a = 1;
 var c = 2;
+var app = new Vue({
+    el: '#app',
+    data: {
+        
+    },
+    methods: {
+        
+    },
+    computed: {
+        
+    },
+    created: function() {
+
+    },
+    mounted: function() {
+
+    }
+});
+
 
 function setCookie(name, value) {
     var Days = 30;

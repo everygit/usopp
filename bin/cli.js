@@ -15,7 +15,8 @@ program.command('ls [cmd]')
     .description('View project, script, style, page and other template names')
     .action(handle.queryList)
 
-program.command('project <projecttype> [path]')
+program.command('project <projecttype> <foldername> [path]')
+    .alias('proj')
     .description("Create a project with a project template")
     .action(handle.createProject);
 

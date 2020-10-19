@@ -9,6 +9,9 @@ var app = new Vue({
     computed: {
         
     },
+    watch: function() {
+
+    },
     created: function() {
 
     },

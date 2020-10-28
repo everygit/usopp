@@ -9,7 +9,7 @@ var app = new Vue({
     computed: {
         
     },
-    watch: function() {
+    watch: {
 
     },
     created: function() {

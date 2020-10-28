@@ -1,5 +1,3 @@
-
-
 //
 Vue.component('templateName', {
     name: 'templateName',
@@ -26,5 +24,3 @@ Vue.component('templateName', {
         }, ["templateName"])
     }
 });
-
-

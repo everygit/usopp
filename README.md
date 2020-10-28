@@ -61,6 +61,7 @@ type | desc
 --|--
 cookie | Basic cookie operations, including reading, writing and deleting
 vue | The basic structure of creating a multi-page vue
+component | Component template for Vue multi-page application
 
 
 ## project

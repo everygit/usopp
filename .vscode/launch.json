@@ -14,11 +14,10 @@
             "runtimeExecutable": "node",
             "args": [
                 "${workspaceFolder}/bin/cli.js",
-                "ins",
-                "component",
-                "./test.js",
-                "-r",
-                "3"
+                "proj",
+                "vuepress",
+                "aaaaaaa",
+                "."
             ]
         }
     ]

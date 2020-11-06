@@ -1,0 +1,17 @@
+{
+    "name": "webpack_docs",
+    "version": "1.0.0",
+    "description": "学习webpack",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "dev": "vuepress dev docs",
+      "build": "vuepress build docs"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git@gitee.com:everygit/webpack_docs.git"
+    },
+    "author": "",
+    "license": "ISC"
+  }

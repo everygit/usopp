@@ -1,4 +1,4 @@
-const {cpdirsSync} = require('@xiaoerr/io');
+const {cpdirsSync, mkdirsSync} = require('@xiaoerr/io');
 const path = require('path');
 
 /**
@@ -13,6 +13,9 @@ module.exports = function(projecttype, foldername, spath, opt) {
         case 'simple':
             createSimpleProject(foldername, spath);
             break;
+        case 'vuepress':
+            createVuepress(foldername, spath);
+            break;
         default:
             console.log(`ERROR ${projecttype} Type items are not currently supported`.red);
     }
@@ -26,5 +29,19 @@ module.exports = function(projecttype, foldername, spath, opt) {
 function createSimpleProject(foldername, spath) {
     var sourceFolder = path.resolve(__dirname, '..', 'template', 'project', 'simple');
     var targetFolder = path.resolve(spath || '.', foldername);
+    console.log(targetFolder);
+    mkdirsSync(targetFolder);
     cpdirsSync(sourceFolder, targetFolder)
+}
+
+/**
+ * Create a vuepress project
+ * @param {string} foldername the name of the folder to create the project
+ * @param {string} spath path to create project
+ */
+function createVuepress(foldername, spath) {
+    var sourceFolder = path.resolve(__dirname, '..', 'template', 'project', 'vuepress');
+    var targetFolder = path.resolve(spath || '.', foldername);
+    mkdirsSync(targetFolder);
+    cpdirsSync(sourceFolder, targetFolder);
 }

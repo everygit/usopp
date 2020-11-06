@@ -71,3 +71,8 @@ Create different projects based on templates
 ```sh
 usopp project simple dianfei ./demo/
 ```
+
+type | desc
+--|--
+simple | a simple project includes index js and css
+vuepress | You can create a vuepress project with configuration
